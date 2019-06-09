@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:background="#FFFFFF"
+                android:layout_height="match_parent">
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp_85"
+            android:layout_marginStart="@dimen/dp_37"
+            android:layout_marginEnd="@dimen/dp_37"
+            android:orientation="vertical"
+            tools:ignore="RtlCompat">
+        <TextView
+                android:layout_width="@dimen/dp_156"
+                android:layout_height="@dimen/dp_37"
+                android:textSize="@dimen/sp_25"
+                android:text="@string/logintop"
+                android:textColor="#23242A" />
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_18"
+                android:layout_marginTop="@dimen/dp_79"
+                android:orientation="horizontal">
+
+            <EditText
+                    android:id="@+id/et_username"
+                    android:layout_width="@dimen/dp_200"
+                    android:layout_height="@dimen/dp_18"
+                    android:layout_alignParentStart="true"
+                    android:background="@null"
+                    android:gravity="center|start"
+                    android:hint="@string/etusername"
+                    android:inputType="phone"
+                    android:maxLength="11"
+                    android:textColor="#FF585F6F"
+                    android:textSize="@dimen/sp_14" />
+
+        </RelativeLayout>
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/dp_8"
+                android:background="#66a6b1c6"/>
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_18"
+                android:layout_marginTop="@dimen/dp_41"
+                android:orientation="horizontal">
+            <EditText
+                    android:id="@+id/et_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_18"
+                    android:hint="@string/etpassword"
+                    android:layout_alignParentStart="true"
+                    android:textColor="#FF585F6F"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:gravity="center|start"
+                    android:background="@null"
+                    android:textSize="@dimen/sp_14"
+                    tools:ignore="TextFields" />
+        </RelativeLayout>
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/dp_8"
+                android:background="#66a6b1c6"/>
+
+        <Button
+                android:id="@+id/btn_load"
+                android:layout_width="match_parent"
+                android:background="@drawable/login_weidtlu"
+                android:layout_marginTop="@dimen/dp_28"
+                android:text="@string/btn_load"
+                android:textSize="18sp"
+                android:textColor="#FFFFFF"
+                android:layout_height="@dimen/dp_46" />
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_23"
+                android:layout_marginTop="@dimen/dp_11"
+                android:orientation="horizontal">
+            <ImageButton
+                    android:id="@+id/btn_chose"
+                    android:layout_width="@dimen/dp_23"
+                    android:layout_height="@dimen/dp_23"
+                    android:background="@drawable/login_check"
+                    tools:ignore="ContentDescription" />
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="我已同意"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical|start"
+                    android:textColor="#585F6F"
+                    android:textSize="@dimen/sp_14"/>
+            <TextView
+                    android:id="@+id/tv_fuwu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/fuwu"
+                    android:gravity="center_vertical|start"
+                    android:layout_gravity="center|start"
+                    android:textColor="#1E4EFF"
+                    android:textSize="@dimen/sp_14"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_65"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/dp_60"
+            android:orientation="vertical">
+        <TextView
+                android:layout_width="@dimen/dp_70"
+                android:layout_height="@dimen/dp_18"
+                android:textSize="@dimen/sp_14"
+                android:layout_gravity="center"
+                android:textColor="#A6B1C6"
+                android:text="@string/otherload"/>
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_26"
+                android:layout_marginTop="@dimen/dp_19"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+            <ImageButton
+                    android:id="@+id/btn_qqload"
+                    android:layout_width="@dimen/dp_22"
+                    android:layout_height="@dimen/dp_25"
+                    android:background="@drawable/login_qq"
+                    tools:ignore="ContentDescription,RtlHardcoded" />
+
+            <ImageButton
+                    android:id="@+id/btn_wxload"
+                    android:layout_width="@dimen/dp_31"
+                    android:layout_height="@dimen/dp_26"
+                    android:layout_marginLeft="@dimen/dp_33"
+                    android:background="@drawable/login_weixin"
+                    tools:ignore="ContentDescription,RtlHardcoded" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
