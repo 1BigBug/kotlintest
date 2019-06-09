@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
 
     fun  getaccess_token(){
         Api.instance.init()
-        Api.instance.service.getAccessToken("https://auth.xnpool.cn/sso/oauth/token",et_username.text.toString(),et_password.text.toString(),"password")
+        Api.instance.service.getAccessToken("url",et_username.text.toString(),et_password.text.toString(),"password")
             .compose(ApiSubscribe.compose())                      //线程切换处理 //生命周期管理
             .subscribe(object : ApiResponse<Access_TokenBeens>(this) {       //对象表达式约等于Java中的匿名内部类
                 override fun success(data: Access_TokenBeens) {

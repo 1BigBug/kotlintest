@@ -36,7 +36,7 @@ class Api {
         val okHttpClient = builder.build()
 
         val retrofit = Retrofit.Builder()
-            .baseUrl("https://xnpool.cn/")
+            .baseUrl("url")
             .addConverterFactory(GsonConverterFactory.create())
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .client(okHttpClient)
