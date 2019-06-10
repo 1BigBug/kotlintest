@@ -1,6 +1,8 @@
 package com.example.kotlintest.http
 
 import com.example.kotlintest.Beens.Access_TokenBeens
+import com.example.kotlintest.Beens.BaseBeens
+import com.example.kotlintest.Beens.CoinInfoBeens
 import io.reactivex.Observable
 import retrofit2.http.*
 
@@ -16,4 +18,7 @@ interface  IRetrofit{
         ) grant_type: String
     ): Observable<Access_TokenBeens>
 
+    //获得币种信息
+    @GET("api/coins/info")
+    fun GetCoinInfo(@Query("access_token") access_token: String): Observable<BaseBeens<CoinInfoBeens>>
 }

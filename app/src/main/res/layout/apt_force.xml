@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dp_82"
+    android:layout_height="@dimen/dp_40"
+    android:orientation="vertical">
+<TextView
+    android:id="@+id/tv_force_title"
+    android:layout_width="wrap_content"
+    android:textSize="@dimen/sp_12"
+    android:gravity="start|center"
+    android:layout_height="@dimen/dp_18"
+    android:textColor="#A6B1C6"
+    android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/tv_force_data"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_22"
+        android:layout_gravity="center"
+        android:gravity="start|center"
+        android:textColor="#23242A"
+        android:textSize="@dimen/sp_15" />
+</LinearLayout>

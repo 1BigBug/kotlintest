@@ -1,7 +1,7 @@
 package com.example.kotlintest.http
 
 import android.content.Context
-import android.support.annotation.StringRes
+import androidx.annotation.StringRes
 import com.example.kotlintest.R
 
 enum class ApiErrorType(val code: Int, @param: StringRes private val messageId: Int) {

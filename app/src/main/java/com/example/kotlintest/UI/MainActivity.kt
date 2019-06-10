@@ -1,9 +1,11 @@
-package com.example.kotlintest
+package com.example.kotlintest.UI
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.example.kotlintest.Beens.Access_TokenBeens
+import com.example.kotlintest.R
+import com.example.kotlintest.UI.Base.MApplication
 import com.example.kotlintest.http.Api
 import com.example.kotlintest.http.ApiErrorModel
 import com.example.kotlintest.http.ApiResponse
@@ -25,6 +27,10 @@ class MainActivity : AppCompatActivity() {
             .subscribe(object : ApiResponse<Access_TokenBeens>(this) {       //对象表达式约等于Java中的匿名内部类
                 override fun success(data: Access_TokenBeens) {
                     //请求成功，此处显示一些返回的数据
+                    intent.setClass(this@MainActivity,CoinActivity::class.java)
+                    intent.putExtra("access_token",data.access_token)
+                    startActivity(intent)
+                    finish()
                 }
                 override fun failure(statusCode: Int, apiErrorModel: ApiErrorModel) { //请求失败，此处直接显示Toast
                     Toast.makeText(this@MainActivity, apiErrorModel.message, Toast.LENGTH_SHORT).show()
